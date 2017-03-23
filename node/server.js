@@ -10,6 +10,8 @@ var io = socketio(server);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use('/', express.static('../client/'));
+
 app.post('/', function(req, res) {
     console.log('post / = ' + JSON.stringify(req.body));
     res.status(200).send('got it');
