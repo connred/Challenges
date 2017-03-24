@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     socket.on('echo', function(data) {
         console.log('socket echo = ' + JSON.stringify(data));
-        $('#dht-display').text(data.temp + "C, " + data.humi + "%");
+        $('#dht-display').text(data.t + "C, " + data.h + "%");
         $('#range-display').text(data.range);
     });
 });
